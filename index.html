@@ -26,8 +26,18 @@
 
 <body class="font-mont text-dark text-lg">
 
-   <!-- header  -->
-   <header class="py-5 fixed top-0 w-full z-50 bg-[#292929]">
+    <!-- search form  -->
+    <div class="fixed w-full z-50 bg-[#292929] top-[-100%] pt-16 pb-8 sm:py-8 px-4 search-bar transition-all">
+        <form action="#">
+            <div class="form-group w-[90%] lg:w-[40%] mx-auto grid sm:grid-cols-[10fr_1fr]">
+                <input class="mb-4 sm:mb-0 w-full leading-10 px-4 focus:outline-none focus:shadow-none" type="search" name="search" id="search" placeholder="search">
+                <button class="px-10 leading-10 text-center bg-white font-bold sm:ml-3 transition hover:bg-orange hover:text-white">Search</button>
+            </div>
+        </form>
+        <span class="search-close absolute right-[16px] top-[16px] sm:top-[50%] translate-y-[0] sm:translate-y-[-50%] cursor-pointer"><i class="text-3xl text-white fa-solid fa-circle-xmark"></i></span>
+    </div>
+    <!-- header  -->
+    <header class="py-5 fixed top-0 w-full z-40 bg-[#292929]">
         <div class="container flex items-center">
             <a href="index.html">
                 <img class="brightness-0 invert" src="assets/img/logo.png" alt="">
@@ -39,17 +49,18 @@
                 <li><a class="transition hover:text-orange" href="#">Contact</a></li>
             </ul>
             <ul class="ml-auto lg:flex space-x-12 text-lg font-mont font-semibold  hidden">
-                <a href="#"><img src="assets/img/icons/search.svg" alt=""></a>
+                <span class="search-triger cursor-pointer"><img src="assets/img/icons/search.svg" alt=""></a></span>
                 <a href="#"><img src="assets/img/icons/profile.svg" alt=""></a>
                 <a href="#"><img src="assets/img/icons/cart.svg" alt=""></a>
             </ul>
-            <div class="ml-auto text-2xl menu-trigger lg:hidden">
-                <i class="text-white fa-solid fa-bars"></i>
+            <div class="ml-auto text-2xl lg:hidden flex">
+                <span class="search-triger cursor-pointer mr-5"><img src="assets/img/icons/search.svg" alt=""></a></span>
+                <span class="menu-trigger"><i class="text-white fa-solid fa-bars"></i></span>
             </div>
         </div>
-   </header>
+    </header>
 
-   <div class="offcanvas-header left-[-300px] fixed w-[300px] h-full z-40 bg-[#292929] px-4 pt-[120px] transition-all lg:hidden">
+    <div class="offcanvas-header left-[-300px] fixed w-[300px] h-full z-30 bg-[#292929] px-4 pt-[120px] transition-all lg:hidden">
         <ul class="space-y-5 text-lg font-mont font-semibold text-white">
             <li><a class="transition hover:text-orange" href="#">Menu</a></li>
             <li><a class="transition hover:text-orange"href="#">About us</a></li>
@@ -57,14 +68,13 @@
             <li><a class="transition hover:text-orange" href="#">Contact</a></li>
         </ul>
         <ul class="text-lg font-mont font-semibold flex mt-8">
-            <a class="mr-[15px]" href="#"><img src="assets/img/icons/search.svg" alt=""></a>
             <a class="mr-[15px]" href="#"><img src="assets/img/icons/profile.svg" alt=""></a>
             <a href="#"><img src="assets/img/icons/cart.svg" alt=""></a>
         </ul>
-   </div>
+    </div>
 
-   <!-- start banner area  -->
-   <section class="banner-area relative z-10 lg:pt-[140px] pt-[120px] md:pb-[120px] pb-[80px] overflow-hidden">
+    <!-- start banner area  -->
+    <section class="banner-area relative z-10 lg:pt-[140px] pt-[120px] md:pb-[120px] pb-[80px] overflow-hidden">
         <div class="container">
             <div class="grid xl:grid-cols-[4fr_8fr] lg:grid-cols-2 block gap-4 items-center">
                 <div class="banner-thumb 2xl:-ml-[50px] xl:ml-0 relative z-10 lg:order-2" data-aos="fade-up">
@@ -87,11 +97,11 @@
             </div>
         </div>
         <img class="absolute top-0 h-full right-0 -z-10 w-1/2 lg:block hidden" src="assets/img/circle-shape.png" alt="">
-   </section>
-   <!-- end banner area  -->
+    </section>
+    <!-- end banner area  -->
 
-   <!-- start chef area  -->
-   <section class="relative pb-[80px] lg:pb-[0]">
+    <!-- start chef area  -->
+    <section class="relative pb-[80px] lg:pb-[0]">
         <div class="container">
             <div class="lg:grid lg:grid-cols-[7fr_5fr] gap-x-4 items-center">
                 <div class="chef-profile-wrap">
@@ -119,11 +129,11 @@
                 </div>
             </div>
         </div>
-   </section>
-   <!-- end chef area  -->
+    </section>
+    <!-- end chef area  -->
 
-   <!-- start why foodline area  -->
-   <section class="py-20 bg-[#292929]">
+    <!-- start why foodline area  -->
+    <section class="py-20 bg-[#292929]">
         <div class="container">
             <div class="div text-center mb-[60px]">
                 <h2 class="section-title text-white">Why FoodLine?</h2>
@@ -161,11 +171,11 @@
                 </div>
             </div>
         </div>
-   </section>
-   <!-- end why foodline area  -->
+    </section>
+    <!-- end why foodline area  -->
 
-   <!-- start media area  -->
-   <section class="py-20">
+    <!-- start media area  -->
+    <section class="py-20">
         <div class="container">
             <div class="grid md:grid-cols-2 items-center gap-4">
                 <div class="mb-7 md:m-0" data-aos="fade-up">
@@ -182,10 +192,10 @@
                 </div>
             </div>
         </div>
-   </section>
-   <!-- end media area  -->
+    </section>
+    <!-- end media area  -->
 
-   <!-- start food items area  -->
+    <!-- start food items area  -->
     <section class="py-20 bg-[#F8F8F8]">
         <div class="container">
             <div class="div text-center mb-[60px]" data-aos="fade-up">
@@ -297,7 +307,7 @@
             </div>
         </div>
     </section>
-   <!-- end food items area  -->
+    <!-- end food items area  -->
 
     <!-- start media area  -->
     <section class="py-20">
@@ -319,7 +329,6 @@
         </div>
     </section>
     <!-- end media area  -->
-
 
     <!-- start contact area  -->
     <section class="py-20">
@@ -359,18 +368,18 @@
             <div class="grid md:grid-cols-1 lg:grid-cols-2 pb-8">
                 <div>
                     <ul class="grid grid-cols-2 gap-y-4 text-center sm:flex justify-center lg:justify-start text-white font-medium text-lg">
-                        <li class="sm:mr-12"><a href="#">Menu</a></li>
-                        <li class="sm:mr-12"><a href="#">About us</a></li>
-                        <li class="sm:mr-12"><a href="#">Speciality</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li class="sm:mr-12 transition hover:text-orange"><a href="#">Menu</a></li>
+                        <li class="sm:mr-12 transition hover:text-orange"><a href="#">About us</a></li>
+                        <li class="sm:mr-12 transition hover:text-orange"><a href="#">Speciality</a></li>
+                        <li><a class="transition hover:text-orange" href="#">Contact</a></li>
                     </ul>
                 </div>
                 <div class="mt-10 lg:mt-0">
                     <ul class="flex justify-center lg:justify-end text-white font-medium text-lg">
-                        <li class="mr-9"><a href="#" class="h-[40px] w-[40px] flex items-center justify-center rounded-full border border-white"><i class="fa-brands fa-facebook-f"></i></a></li>
-                        <li class="mr-9"><a href="#" class="h-[40px] w-[40px] flex items-center justify-center rounded-full border border-white"><i class="fa-brands fa-twitter"></i></a></li>
-                        <li class="mr-9"><a href="#" class="h-[40px] w-[40px] flex items-center justify-center rounded-full border border-white"><i class="fa-brands fa-instagram"></i></a></li>
-                        <li><a href="#" class="h-[40px] w-[40px] flex items-center justify-center rounded-full border border-white"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                        <li class="mr-9"><a href="#" class="h-[40px] w-[40px] flex items-center justify-center rounded-full border border-white transition hover:bg-orange hover:border-orange"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li class="mr-9"><a href="#" class="h-[40px] w-[40px] flex items-center justify-center rounded-full border border-white transition hover:bg-orange hover:border-orange"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li class="mr-9"><a href="#" class="h-[40px] w-[40px] flex items-center justify-center rounded-full border border-white transition hover:bg-orange hover:border-orange"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#" class="h-[40px] w-[40px] flex items-center justify-center rounded-full border border-white transition hover:bg-orange hover:border-orange"><i class="fa-brands fa-linkedin-in"></i></a></li>
                     </ul>
                 </div>
             </div>

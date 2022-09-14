@@ -26,3 +26,7 @@
 .offcanvas-header.active {
     left: 0;
 }
+
+.search-bar.active {
+    top:0
+}
